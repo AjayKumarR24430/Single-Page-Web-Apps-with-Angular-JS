@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="../angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>Name Calculator</title>
+  </head>
+  <body ng-app="LunchCheck">
+    <h1>Lunch Check</h1>
+    <div ng-controller="LunchCheckController">
+        <div>
+            <input type="text" placeholder='Enter the comma separated dishes for Lunch'
+                ng-model= "num">
+        </div>
+        <br />
+        <div>
+            <button ng-click="checkItems();" >Check If Too Much</button>
+        </div>
+        <br/>
+        <div>
+            {{msg}}
+        </div>
+    </div>
+  </body>
+</html>
