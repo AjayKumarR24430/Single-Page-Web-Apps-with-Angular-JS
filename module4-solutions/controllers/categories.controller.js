@@ -1,14 +1,13 @@
-(function() {
-    'use strict';
-  
-    angular.module('MenuApp')
-      .controller('categoriesController', categoriesController);
-  
-    categoriesController.$inject = ['MenuDataService', 'categories'];
-  
-    function categoriesController(MenuDataService,categories) {
-      var menuCategories = this;
-  
-      menuCategories.categories = categories;
-    }
-  })();
+(function () {
+  'use strict';
+
+  angular.module('MenuApp')
+  .controller('CategoriesController', CategoriesController);
+
+  CategoriesController.$inject = ['items'];
+  function CategoriesController(items) {
+    var categoriesCtrl = this;
+    categoriesCtrl.items = items;
+  }
+
+})();

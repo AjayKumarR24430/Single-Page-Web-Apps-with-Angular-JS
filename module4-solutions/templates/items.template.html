@@ -1,2 +1,14 @@
-<h1>Menu Category: {{menuItems.categoryName}}</h1>
-<items items="menuItems.items"></items>
+<div class="container">
+  <br>
+  <h3>Items</h3>
+  <nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+      <a ui-sref="home">Home</a> &lt; <a ui-sref="categories">Categories</a> &lt; <span>Items</span>
+    </ol>
+  </nav>
+  <ol>
+    <li ng-repeat="item in itemsCtrl.items">
+      {{item.short_name}} , {{item.name}}, {{item.description}}
+    </li>
+  </ol>
+</div>

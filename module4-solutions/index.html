@@ -1,46 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+<head>
+  <title>Restaurant App</title>
   <head>
-    <title>Menu App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body ng-app="MenuApp">
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" ui-sref="home">Menu App</a>
-        </div>
-    </nav>
-    <div class="container">
-        <nav>
-            <ul class="nav nav-pills pull-right">
-                <li ui-sref-active="active" ui-sref="home"><a href="#">Home</a></li>
-                <li ui-sref-active="active" ui-sref="categories" ><a href="#">Categories</a></li>
-            </ul>
-        </nav>
-            <h3>Restaurant Menu App</h3>
-        </div>
-      <ui-view></ui-view>
-    </div>
-    <!-- Vendor scripts -->
+
+    <!-- Libraries -->
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-ui-router.min.js"></script>
-    <!-- MenuApp module -->
-    <script src="./modules/menuapp.module.js"></script>
-    <script src="./modules/data.module.js"></script>
-    <script src="./controllers/categories.controller.js"></script>
-    <script src="./controllers/items.controller.js"></script>
-    <script src="./services/menudata.service.js"></script>
-    <script src="./components/categories.component.js"></script>
-    <script src="./components/items.component.js"></script>
-    <script src="./routes.js"></script>
-    <script src="./templates/home.html"></script>
 
-    <script src="./templates/categories.component.html"></script>
-    <script src="./templates/categories.template.html"></script>
-    <script src="./templates/items.component.html"></script>
-    <script src="./templates/items.template.html"></script>
+    <!-- Modules -->
+    <script src="modules/menuapp.module.js"></script>
+    <script src="modules/data.module.js"></script>
+    <script src="modules/spinner.module.js"></script>
+
+    <!-- Routes -->
+    <script src="routes.js"></script>
+
+    <!-- MenuApp module artifacts -->
+    <script src="components/categories.component.js"></script>
+    <script src="controllers/categories.controller.js"></script>
+    <script src="components/items.component.js"></script>
+    <script src="controllers/items.controller.js"></script>
+
+    <!-- Data module artifacts -->
+    <script src="service/menudata.service.js"></script>
+
+    <!-- 'Spinner' module artifacts -->
+    <script src="components/loadingspinner.component.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <ui-view></ui-view>
+    </div>
   </body>
-</html>
+  </html
