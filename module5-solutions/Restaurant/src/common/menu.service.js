@@ -27,6 +27,18 @@ function MenuService($http, ApiPath) {
     });
   };
 
+  service.setUserProfile = (user) => {
+    service.user = user;
+  };
+
+  service.getUserProfile = () => {
+    return service.user;
+  };
+
+  service.getFavoriteDish = (shortName) => {
+    return $http.get(ApiPath + '/menu_items' + shortName + '.json');
+  }
+
 }
 
 
