@@ -36,7 +36,7 @@ function MenuService($http, ApiPath) {
   };
 
   service.getFavoriteDish = (shortName) => {
-    return $http.get(ApiPath + '/menu_items' + shortName + '.json');
+    return $http.get(ApiPath + '/menu_items/' + shortName + '.json');
   }
 
 }
